@@ -6,7 +6,7 @@ from pathlib import Path
 # C and Z = Scissors 3 win 6
 
 
-def RockPaperScissors(input):
+def rock_paper_scissors(input):
     scores = input.split("\n")
     my_count = 0
     for score in scores:
@@ -35,6 +35,6 @@ def RockPaperScissors(input):
 if __name__ == "__main__":
     file = Path(sys.argv[1])
     if Path.is_file(file):
-        RockPaperScissors(Path.read_text(file))
+        rock_paper_scissors(Path.read_text(file))
     else:
         raise TypeError("This is not a file")
