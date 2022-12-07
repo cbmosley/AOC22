@@ -1,11 +1,12 @@
 import sys
 from pathlib import Path
+import string
 
 
 def ruck_sack(input):
     rucksack_items = input.split("\n")
 
-    alphabet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    alphabet = string.ascii_letters
     priority = {}
     sum = 0
     group_value = []
